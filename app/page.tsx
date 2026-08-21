@@ -112,8 +112,7 @@ export default function Home() {
           <div className="portrait-card">
             <div className="shine-border" aria-hidden="true" />
             <div className="portrait-placeholder">
-              <span>LL</span>
-              <small>Tu foto profesional</small>
+              <img src="/perfil.png" alt="" />
             </div>
             <div className="portrait-caption">
               <span>Basado en México</span>
