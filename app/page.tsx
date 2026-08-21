@@ -67,6 +67,7 @@ export default function Home() {
       <section className="hero" id="inicio">
         <div className="dot-pattern" aria-hidden="true" />
         <div className="hero-glow" aria-hidden="true" />
+        <div className="hero-aurora" aria-hidden="true"><i /><i /><i /></div>
 
         <div className="hero-copy reveal-first">
           <div className="availability">
@@ -76,7 +77,7 @@ export default function Home() {
           <p className="eyebrow">DESARROLLADOR FULL STACK · PRODUCT BUILDER</p>
           <h1>
             Construyo productos digitales que se sienten
-            <span className="gradient-text"> simples, rápidos y memorables.</span>
+            <span className="aurora-text"> simples, rápidos y memorables.</span>
           </h1>
           <p className="hero-summary">
             Convierto problemas complejos en experiencias web claras. Desde la
@@ -120,6 +121,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <p className="video-text" aria-hidden="true">LUIS</p>
 
         <a className="scroll-cue" href="#proyectos">
           <span>DESLIZA PARA EXPLORAR</span>
