@@ -7,14 +7,16 @@ export const metadata: Metadata = {
 };
 
 const stack = [
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Astro",
-  "Node.js",
-  "Tailwind CSS",
-  "PostgreSQL",
-  "Docker",
+  { label: "TypeScript", icon: "typescript", color: "3178C6" },
+  { label: "React", icon: "react", color: "61DAFB" },
+  { label: "Next.js", icon: "nextdotjs", color: "FFFFFF" },
+  { label: "Astro", icon: "astro", color: "FF5D01" },
+  { label: "Node.js", icon: "nodedotjs", color: "5FA04E" },
+  { label: "Tailwind", icon: "tailwindcss", color: "06B6D4" },
+  { label: "PostgreSQL", icon: "postgresql", color: "4169E1" },
+  { label: "Docker", icon: "docker", color: "2496ED" },
+  { label: "Git", icon: "git", color: "F05032" },
+  { label: "Figma", icon: "figma", color: "F24E1E" },
 ];
 
 const capabilities = [
@@ -34,6 +36,15 @@ const capabilities = [
     text: "APIs, autenticación, datos e integraciones construidos para crecer con el producto.",
   },
 ];
+
+function TechIcon({ tool }: { tool: (typeof stack)[number] }) {
+  return (
+    <div className="tech-icon">
+      <img src={`https://cdn.simpleicons.org/${tool.icon}/${tool.color}`} alt="" />
+      <span>{tool.label}</span>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -85,6 +96,14 @@ export default function Home() {
             <i aria-hidden="true" />
             <span>Frontend · Backend · Producto</span>
           </div>
+          <div className="hero-tech" aria-label="Tecnologías principales">
+            {stack.slice(0, 6).map((tool) => (
+              <span key={tool.label}>
+                <img src={`https://cdn.simpleicons.org/${tool.icon}/${tool.color}`} alt="" />
+                {tool.label}
+              </span>
+            ))}
+          </div>
         </div>
 
         <div className="portrait-wrap reveal-second" aria-label="Espacio para fotografía profesional">
@@ -113,11 +132,48 @@ export default function Home() {
         <div className="marquee-fade marquee-fade-left" />
         <div className="marquee-fade marquee-fade-right" />
         <div className="marquee-track">
-          {[...stack, ...stack].map((item, index) => (
-            <span key={`${item}-${index}`}>
-              {item}<i aria-hidden="true">✦</i>
+          {[...stack, ...stack].map((tool, index) => (
+            <span key={`${tool.label}-${index}`}>
+              <img src={`https://cdn.simpleicons.org/${tool.icon}/${tool.color}`} alt="" />
+              {tool.label}<i aria-hidden="true">✦</i>
             </span>
           ))}
+        </div>
+      </section>
+
+      <section className="section technical-section" aria-labelledby="stack-title">
+        <div className="section-heading compact-heading">
+          <div>
+            <p className="section-kicker">STACK TÉCNICO</p>
+            <h2 id="stack-title">Herramientas para llevar ideas a producción.</h2>
+          </div>
+          <p>Un stack pensado para interfaces pulidas, lógica sólida y productos que pueden crecer.</p>
+        </div>
+        <div className="technical-grid">
+          <article className="tech-card bento-card">
+            <p>FRONTEND</p>
+            <div className="tech-icon-grid">
+              {stack.slice(0, 4).map((tool) => <TechIcon key={tool.label} tool={tool} />)}
+            </div>
+          </article>
+          <article className="tech-card bento-card">
+            <p>BACKEND & DATOS</p>
+            <div className="tech-icon-grid">
+              {stack.slice(4, 8).map((tool) => <TechIcon key={tool.label} tool={tool} />)}
+            </div>
+          </article>
+          <article className="tech-card bento-card tooling-card">
+            <p>HERRAMIENTAS</p>
+            <div className="tech-icon-grid">
+              {stack.slice(8).map((tool) => <TechIcon key={tool.label} tool={tool} />)}
+            </div>
+            <small>Y las que el reto necesite.</small>
+          </article>
+          <article className="impact-card bento-card">
+            <p>FORMA DE TRABAJAR</p>
+            <strong>Diseño + Ingeniería</strong>
+            <span>Decisiones técnicas con foco en usuario, rendimiento y negocio.</span>
+          </article>
         </div>
       </section>
 
