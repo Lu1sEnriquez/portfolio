@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://luis-docauth-portfolio.diana-dpv2345.chatgpt.site"),
   title: "Luis — Desarrollador Full Stack",
   description: "Productos web claros, rápidos y memorables.",
   openGraph: {
