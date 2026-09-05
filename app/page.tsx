@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Luis — Desarrollador Full Stack",
   description:
-    "Portafolio de Luis: productos web, experiencias digitales y DocAuth.",
+    "Luis, desarrollador full stack. Conoce DocAuth, mi proyecto principal de emisión y verificación de documentos digitales.",
 };
 
 const stack = [
@@ -68,35 +68,38 @@ export default function Home() {
         <div className="dot-pattern" aria-hidden="true" />
         <div className="hero-glow" aria-hidden="true" />
         <div className="hero-aurora" aria-hidden="true"><i /><i /><i /></div>
+        <div className="particles" aria-hidden="true">{Array.from({ length: 18 }, (_, i) => <i key={i} />)}</div>
+        <div className="meteor-field" aria-hidden="true">{Array.from({ length: 5 }, (_, i) => <i key={i} />)}</div>
 
         <div className="hero-copy reveal-first">
           <div className="availability">
             <span className="availability-dot" />
             Disponible para nuevas oportunidades
           </div>
-          <p className="eyebrow">DESARROLLADOR FULL STACK · PRODUCT BUILDER</p>
+          <p className="eyebrow">SOY LUIS / DESARROLLADOR FULL STACK</p>
           <h1>
-            Construyo productos digitales que se sienten
-            <span className="aurora-text"> simples, rápidos y memorables.</span>
+            Ideas que llegan
+            <span className="aurora-text"> a producción.</span>
           </h1>
           <p className="hero-summary">
-            Convierto problemas complejos en experiencias web claras. Desde la
-            idea y la interfaz hasta una implementación lista para producción.
+            Diseño y desarrollo experiencias web de principio a fin.
+            Mi proyecto principal es DocAuth: documentos digitales que
+            se pueden emitir, compartir y verificar.
           </p>
           <div className="hero-actions">
             <a className="button button-primary shimmer-button" href="#proyectos">
-              Explorar mi trabajo <span aria-hidden="true">↗</span>
+              Conocer DocAuth <span aria-hidden="true">↓</span>
             </a>
             <a className="button button-secondary" href="#contacto">
               Hablemos
             </a>
           </div>
-          <div className="hero-proof">
-            <span>Actualmente construyendo</span>
+          <a className="hero-proof" href="https://docauth.app/" target="_blank" rel="noopener noreferrer">
+            <span className="availability-dot" aria-hidden="true" />
+            <span>MI PROYECTO EN VIVO</span>
             <strong>DocAuth</strong>
-            <i aria-hidden="true" />
-            <span>Frontend · Backend · Producto</span>
-          </div>
+            <span>docauth.app ↗</span>
+          </a>
           <div className="hero-tech" aria-label="Tecnologías principales">
             {stack.slice(0, 6).map((tool) => (
               <span key={tool.label}>
@@ -107,13 +110,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="portrait-wrap reveal-second" aria-label="Espacio para fotografía profesional">
+        <div className="portrait-wrap reveal-second" aria-label="Luis, desarrollador full stack">
           <div className="orbit orbit-one" aria-hidden="true" />
           <div className="orbit orbit-two" aria-hidden="true" />
           <div className="portrait-card">
             <div className="shine-border" aria-hidden="true" />
             <div className="portrait-placeholder">
-              <img src="/perfil.png" alt="" />
+              <img src="/perfil.png" alt="Retrato de Luis" width="360" height="450" />
             </div>
             <div className="portrait-caption">
               <span>Basado en México</span>
@@ -140,6 +143,98 @@ export default function Home() {
               {tool.label}<i aria-hidden="true">✦</i>
             </span>
           ))}
+        </div>
+      </section>
+
+
+      <section className="section projects-section" id="proyectos">
+        <div className="section-heading">
+          <div>
+            <p className="section-kicker">01 / TRABAJO SELECCIONADO</p>
+            <h2>Un producto real.<br /><span className="gradient-text">Una idea hecha sistema.</span></h2>
+          </div>
+          <p>
+            DocAuth es mi proyecto principal: una plataforma para acompañar
+            todo el recorrido de un documento institucional.
+          </p>
+        </div>
+
+        <article className="featured-project bento-card magic-card" id="docauth">
+          <div className="border-beam" aria-hidden="true" />
+          <div className="project-copy">
+            <div className="project-meta">
+              <span className="live-pill"><i /> EN PRODUCCIÓN</span>
+              <span>2026</span>
+            </div>
+            <p className="project-index">PROYECTO PRINCIPAL / SEGURIDAD DIGITAL</p>
+            <h3>DocAuth</h3>
+            <p className="project-description">
+              Del diseño de una plantilla a una credencial verificable.
+              DocAuth reúne aprobaciones, emisión documental y consulta
+              pública de autenticidad en una misma plataforma.
+            </p>
+            <div className="project-tags">
+              <span>Documentos digitales</span><span>QR</span><span>API & webhooks</span>
+            </div>
+            <div className="project-actions">
+              <a className="button button-primary shimmer-button" href="https://docauth.app/" target="_blank" rel="noopener noreferrer">Visitar DocAuth <span aria-hidden="true">↗</span></a>
+              <a className="project-link" href="#docauth-detalle">Explorar el producto <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+          <figure className="docauth-preview">
+            <div className="preview-topline"><span>DOC / AUTH</span><span>PRODUCTO EN VIVO ↗</span></div>
+            <a href="https://docauth.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir DocAuth y conocer sus credenciales digitales">
+              <img src="/docauth-certificado.png" alt="Certificado de demostración publicado por DocAuth, con firma y código QR" width="2400" height="1680" loading="lazy" />
+            </a>
+            <figcaption>Certificado de demostración del sitio de DocAuth.</figcaption>
+            <div className="preview-features"><span>QR verificable</span><span>Evidencia criptográfica</span></div>
+          </figure>
+        </article>
+
+        <div className="case-bento" id="docauth-detalle">
+          <article className="case-context bento-card magic-card">
+            <p className="section-kicker">EL RETO</p>
+            <h3>La confianza también necesita una buena experiencia.</h3>
+            <p>Emitir una credencial y comprobar su integridad son partes del mismo recorrido. DocAuth conecta a la organización que la emite con la persona que necesita verificarla.</p>
+            <div className="case-flow" aria-label="Recorrido documental"><span>Diseñar</span><i aria-hidden="true">→</i><span>Aprobar</span><i aria-hidden="true">→</i><span>Verificar</span></div>
+          </article>
+          <article className="case-capabilities bento-card magic-card">
+            <p className="section-kicker">DENTRO DEL PRODUCTO</p>
+            <ol>
+              <li><span>01</span><div><h3>Plantillas visuales</h3><p>Editor con campos dinámicos.</p></div></li>
+              <li><span>02</span><div><h3>Aprobación y emisión</h3><p>Firmas coordinadas y lotes desde Excel o CSV.</p></div></li>
+              <li><span>03</span><div><h3>Verificación pública</h3><p>Consulta de documentos mediante enlace o QR.</p></div></li>
+            </ol>
+          </article>
+          <article className="case-note bento-card magic-card"><span className="case-symbol" aria-hidden="true">↔</span><div><h3>Conectado a otros sistemas</h3><p>API y webhooks para integrar los flujos documentales.</p></div></article>
+          <article className="case-note bento-card magic-card"><span className="case-symbol" aria-hidden="true">◎</span><div><h3>Diseñado para organizaciones</h3><p>Roles y permisos para diseñar, aprobar y emitir.</p></div></article>
+        </div>
+
+        <div className="project-grid">
+          <article className="project-card bento-card private-card">
+            <div className="private-visual visual-violet">
+              <span className="private-lock">PRIVADO</span>
+              <div className="abstract-window"><i /><i /><i /></div>
+            </div>
+            <div className="small-project-copy">
+              <p>PLATAFORMA INTERNA / 02</p>
+              <h3>Caso confidencial</h3>
+              <span>Flujos operativos convertidos en una interfaz simple y medible.</span>
+              <div className="project-tags"><span>Dashboard</span><span>UX</span><span>Datos</span></div>
+            </div>
+          </article>
+          <article className="project-card bento-card private-card">
+            <div className="private-visual visual-mint">
+              <span className="private-lock">LOCAL</span>
+              <div className="abstract-terminal"><i /><i /><i /><i /></div>
+            </div>
+            <div className="small-project-copy">
+              <p>EXPERIMENTO DE PRODUCTO / 03</p>
+              <h3>Laboratorio local</h3>
+              <span>Prototipo funcional para validar una idea antes de invertir en escala.</span>
+              <div className="project-tags"><span>Prototipo</span><span>Full stack</span></div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -179,90 +274,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section projects-section" id="proyectos">
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">01 / TRABAJO SELECCIONADO</p>
-            <h2>Proyectos con intención.</h2>
-          </div>
-          <p>
-            No sólo código: decisiones, contexto y resultados. Cada proyecto
-            muestra cómo pienso y cómo convierto una idea en producto.
-          </p>
-        </div>
-
-        <article className="featured-project bento-card">
-          <div className="border-beam" aria-hidden="true" />
-          <div className="project-copy">
-            <div className="project-meta">
-              <span className="live-pill"><i /> EN PRODUCCIÓN</span>
-              <span>2026</span>
-            </div>
-            <p className="project-index">PROYECTO DESTACADO / 01</p>
-            <h3>DocAuth</h3>
-            <p className="project-description">
-              Una plataforma que transforma la validación documental en un
-              proceso rápido, claro y confiable para personas y organizaciones.
-            </p>
-            <div className="project-tags">
-              <span>TypeScript</span><span>React</span><span>API</span><span>Producto</span>
-            </div>
-            <a className="project-link" href="#contacto">
-              Ver caso de estudio <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-          <div className="project-visual" aria-label="Vista previa provisional de DocAuth">
-            <div className="browser-mockup">
-              <div className="browser-top">
-                <div><i /><i /><i /></div>
-                <span>docauth.app</span>
-              </div>
-              <div className="browser-body">
-                <div className="docauth-logo">D<span>•</span></div>
-                <p>Verifica. Confía. Avanza.</p>
-                <div className="document-card">
-                  <div className="document-icon">✓</div>
-                  <div><strong>Documento auténtico</strong><small>Validación completada</small></div>
-                  <span>100%</span>
-                </div>
-                <div className="metric-row">
-                  <span><strong>&lt; 3s</strong><small>Validación</small></span>
-                  <span><strong>24/7</strong><small>Disponible</small></span>
-                  <span><strong>Seguro</strong><small>De origen</small></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <div className="project-grid">
-          <article className="project-card bento-card private-card">
-            <div className="private-visual visual-violet">
-              <span className="private-lock">PRIVADO</span>
-              <div className="abstract-window"><i /><i /><i /></div>
-            </div>
-            <div className="small-project-copy">
-              <p>PLATAFORMA INTERNA / 02</p>
-              <h3>Caso confidencial</h3>
-              <span>Flujos operativos convertidos en una interfaz simple y medible.</span>
-              <div className="project-tags"><span>Dashboard</span><span>UX</span><span>Datos</span></div>
-            </div>
-          </article>
-          <article className="project-card bento-card private-card">
-            <div className="private-visual visual-mint">
-              <span className="private-lock">LOCAL</span>
-              <div className="abstract-terminal"><i /><i /><i /><i /></div>
-            </div>
-            <div className="small-project-copy">
-              <p>EXPERIMENTO DE PRODUCTO / 03</p>
-              <h3>Laboratorio local</h3>
-              <span>Prototipo funcional para validar una idea antes de invertir en escala.</span>
-              <div className="project-tags"><span>Prototipo</span><span>Full stack</span></div>
-            </div>
-          </article>
-        </div>
-      </section>
-
       <section className="section about-section" id="sobre-mi">
         <div className="section-heading">
           <div>
@@ -285,8 +296,7 @@ export default function Home() {
           </article>
           <article className="about-photo bento-card">
             <div className="photo-placeholder-secondary">
-              <span>FOTO</span>
-              <small>Una imagen cercana trabajando o creando</small>
+              <img src="/perfil.png" alt="Luis" width="360" height="450" loading="lazy" />
             </div>
           </article>
           <article className="stat-card bento-card">
@@ -294,8 +304,8 @@ export default function Home() {
             <p>De la primera idea a un producto que puede seguir creciendo.</p>
           </article>
           <article className="stat-card bento-card accent-card">
-            <strong>100%</strong>
-            <p>Propiedad sobre el resultado, no sólo sobre la tarea asignada.</p>
+            <strong>DocAuth ↗</strong>
+            <p>Mi proyecto principal, disponible para explorar en línea.</p>
           </article>
         </div>
       </section>
@@ -307,8 +317,7 @@ export default function Home() {
             <h2>Cómo aporto valor.</h2>
           </div>
           <p>
-            Esta sección quedará lista para incorporar tus empresas, fechas y
-            logros reales sin cambiar el diseño.
+            Producto, interfaces y sistemas: las áreas en las que enfoco mi trabajo.
           </p>
         </div>
 
@@ -363,6 +372,13 @@ export default function Home() {
         <p>Diseñado y construido con intención.</p>
         <a href="#inicio">Volver arriba ↑</a>
       </footer>
+
+      <nav className="portfolio-dock" aria-label="Navegación rápida">
+        <a href="#inicio" aria-label="Inicio">L<span>.</span></a>
+        <a href="#proyectos">DocAuth</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
+      </nav>
     </main>
   );
 }
