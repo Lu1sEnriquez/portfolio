@@ -184,7 +184,7 @@ export default function Home() {
           <figure className="docauth-preview">
             <div className="preview-topline"><span>DOC / AUTH</span><span>PRODUCTO EN VIVO ↗</span></div>
             <a href="https://docauth.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir DocAuth y conocer sus credenciales digitales">
-              <img src="/docauth-certificado.png" alt="Certificado de demostración publicado por DocAuth, con firma y código QR" width="2400" height="1680" loading="lazy" />
+              <img src="https://docauth.app/landing/movil/demo_certificado.png" alt="Certificado de demostración publicado por DocAuth, con firma y código QR" width="2400" height="1680" loading="lazy" />
             </a>
             <figcaption>Certificado de demostración del sitio de DocAuth.</figcaption>
             <div className="preview-features"><span>QR verificable</span><span>Evidencia criptográfica</span></div>
@@ -209,6 +209,45 @@ export default function Home() {
           <article className="case-note bento-card magic-card"><span className="case-symbol" aria-hidden="true">↔</span><div><h3>Conectado a otros sistemas</h3><p>API y webhooks para integrar los flujos documentales.</p></div></article>
           <article className="case-note bento-card magic-card"><span className="case-symbol" aria-hidden="true">◎</span><div><h3>Diseñado para organizaciones</h3><p>Roles y permisos para diseñar, aprobar y emitir.</p></div></article>
         </div>
+
+        <section className="tracking-case" aria-labelledby="tracking-title">
+          <div className="tracking-heading">
+            <div>
+              <p className="section-kicker">02 / OPERACIÓN EN CAMPO</p>
+              <h2 id="tracking-title">Seguimiento que le da certeza a cada visita.</h2>
+            </div>
+            <p>Una experiencia para que las personas elijan su turno, sigan a su técnico y sepan cuándo llegó a su domicilio.</p>
+          </div>
+
+          <article className="tracking-feature bento-card magic-card">
+            <div className="tracking-copy">
+              <span className="private-lock">PROYECTO PRIVADO</span>
+              <p className="section-kicker">ENI NETWORKS / MAPAS Y ZONAS</p>
+              <h3>Visibilidad para el cliente y control para la operación.</h3>
+              <p>Diseñé una experiencia de seguimiento de instalaciones que conecta el avance de una visita con ubicación, rutas y zonas de atención.</p>
+              <div className="tracking-tags"><span>Seguimiento en campo</span><span>Mapas</span><span>Administración de zonas</span></div>
+            </div>
+            <figure className="tracking-admin-preview">
+              <img src="/projects/eninetworks/zones-dashboard.png" alt="Vista conceptual de un panel administrativo con zonas de servicio, técnicos y rutas de instalación" width="1664" height="936" loading="lazy" />
+              <figcaption>Vista conceptual del panel de zonas y operación.</figcaption>
+            </figure>
+          </article>
+
+          <div className="tracking-gallery" aria-label="Flujo móvil de seguimiento en Eni Networks">
+            <figure className="tracking-screen bento-card">
+              <img src="/projects/eninetworks/tracking-1.png" alt="Selección de turno para una instalación de Eni Networks" width="375" height="812" loading="lazy" />
+              <figcaption><span>01</span> Selección de turno</figcaption>
+            </figure>
+            <figure className="tracking-screen bento-card">
+              <img src="/projects/eninetworks/tracking-2.png" alt="Seguimiento de técnico en ruta sobre mapa" width="375" height="812" loading="lazy" />
+              <figcaption><span>02</span> Técnico en ruta</figcaption>
+            </figure>
+            <figure className="tracking-screen bento-card">
+              <img src="/projects/eninetworks/tracking-3.png" alt="Confirmación de técnico en el domicilio sobre mapa" width="375" height="812" loading="lazy" />
+              <figcaption><span>03</span> Técnico en sitio</figcaption>
+            </figure>
+          </div>
+        </section>
 
         <div className="project-grid">
           <article className="project-card bento-card private-card">
@@ -361,7 +400,7 @@ export default function Home() {
           Envíame un mensaje <span aria-hidden="true">↗</span>
         </a>
         <div className="contact-links" id="datos-contacto-pendientes">
-          <a href="mailto:"><span>CORREO</span><strong>Agregar dirección</strong><i>↗</i></a>
+          <a href="mailto:"><span>CORREO</span><strong>luis.lavz.2300@gmail.com</strong><i>↗</i></a>
           <a href="https://www.linkedin.com" target="_blank" rel="noreferrer"><span>LINKEDIN</span><strong>Agregar perfil</strong><i>↗</i></a>
           <a href="https://github.com" target="_blank" rel="noreferrer"><span>GITHUB</span><strong>Agregar perfil</strong><i>↗</i></a>
         </div>
