@@ -62,6 +62,7 @@ export default function Home() {
         <a className="nav-cta" href="#contacto">
           Trabajemos juntos <span aria-hidden="true">↗</span>
         </a>
+        <a className="nav-version" href="/v2">Ver V2</a>
       </nav>
 
       <section className="hero" id="inicio">
@@ -401,8 +402,8 @@ export default function Home() {
         </a>
         <div className="contact-links" id="datos-contacto-pendientes">
           <a href="mailto:"><span>CORREO</span><strong>luis.lavz.2300@gmail.com</strong><i>↗</i></a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer"><span>LINKEDIN</span><strong>Agregar perfil</strong><i>↗</i></a>
-          <a href="https://github.com" target="_blank" rel="noreferrer"><span>GITHUB</span><strong>Agregar perfil</strong><i>↗</i></a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer"><span>LINKEDIN</span><strong>https://www.linkedin.com/in/luis-arturo-enriquez-v-966b502b6/</strong><i>↗</i></a>
+          <a href="https://github.com" target="_blank" rel="noreferrer"><span>GITHUB</span><strong>https://github.com/Lu1sEnriquez</strong><i>↗</i></a>
         </div>
       </section>
 
