@@ -183,7 +183,17 @@ export default function PortfolioV3() {
         <h2>¿Construimos<br /><AuroraText>algo increíble?</AuroraText></h2>
         <p>Busco colaborar en productos donde una buena interfaz y una ingeniería sólida importen de verdad.</p>
         <a href="mailto:" className="v3-contact-button">Iniciar conversación <span>↗</span></a>
-        <div className="v3-contact-meta"><span>Correo · pendiente</span><span>LinkedIn · pendiente</span><span>GitHub · pendiente</span></div>
+        <div className="v3-socials" aria-label="Redes sociales">
+          <button type="button" className="v3-social-icon" aria-label="Correo — enlace pendiente" title="Correo · enlace pendiente" disabled>
+            <span className="v3-mail-icon" aria-hidden="true">✉</span>
+          </button>
+          <button type="button" className="v3-social-icon linkedin" aria-label="LinkedIn — enlace pendiente" title="LinkedIn · enlace pendiente" disabled>
+            <img src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="" width="25" height="25" />
+          </button>
+          <button type="button" className="v3-social-icon github" aria-label="GitHub — enlace pendiente" title="GitHub · enlace pendiente" disabled>
+            <img src="https://cdn.simpleicons.org/github/FFFFFF" alt="" width="25" height="25" />
+          </button>
+        </div>
       </section>
 
       <footer className="v3-footer"><span>LUIS ARTURO © 2026</span><span>DESIGNED & BUILT WITH REACT</span><a href="#inicio">VOLVER ARRIBA ↑</a></footer>
