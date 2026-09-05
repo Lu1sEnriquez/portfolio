@@ -17,7 +17,7 @@ export default function PortfolioV2() {
           <a href="#v2-perfil">Perfil</a>
           <a href="#v2-contacto">Contacto</a>
         </div>
-        <a className="v2-switch" href="/">Ver versión 01 ↗</a>
+        <a className="v2-switch" href="/v3">Ver versión 03 ↗</a>
       </nav>
 
       <section className="v2-hero" id="v2-inicio">

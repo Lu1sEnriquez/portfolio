@@ -62,7 +62,7 @@ export default function Home() {
         <a className="nav-cta" href="#contacto">
           Trabajemos juntos <span aria-hidden="true">↗</span>
         </a>
-        <a className="nav-version" href="/v2">Ver V2</a>
+        <a className="nav-version" href="/v3">Ver V3 ✦</a>
       </nav>
 
       <section className="hero" id="inicio">
