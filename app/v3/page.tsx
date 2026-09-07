@@ -6,6 +6,17 @@ import { Dock, DockIcon } from "../../components/magicui/dock";
 import { Meteors } from "../../components/magicui/meteors";
 import { Particles } from "../../components/magicui/particles";
 import { ShineBorder } from "../../components/magicui/shine-border";
+import {
+  ArrowDownRightIcon,
+  ArrowUpIcon,
+  ArrowUpRightIcon,
+  GitHubIcon,
+  GridIcon,
+  HomeIcon,
+  LinkedInIcon,
+  MailIcon,
+  TerminalIcon,
+} from "../../components/icons";
 
 export const metadata: Metadata = {
   title: "Luis Arturo — Full Stack Engineer",
@@ -85,11 +96,11 @@ export default function PortfolioV3() {
         <div className="v3-hero-copy">
           <div className="v3-availability"><span /> Disponible para nuevos retos</div>
           <p className="v3-kicker">FULL STACK ENGINEER · MÉXICO / REMOTO</p>
-          <h1>Construyo productos<br /><AuroraText>de punta a punta.</AuroraText></h1>
+          <h1>Construyo productos<br /><AuroraText className="v3-serif">de punta a punta.</AuroraText></h1>
           <p className="v3-intro">Frontend preciso, backend sólido e infraestructura lista para producción. Convierto operaciones complejas en experiencias claras y confiables.</p>
           <div className="v3-hero-actions">
-            <a className="v3-primary" href="#proyectos">Explorar mi trabajo <span>↘</span></a>
-            <a className="v3-secondary" href="https://docauth.app/" target="_blank" rel="noopener noreferrer">Ver DocAuth ↗</a>
+            <a className="v3-primary" href="#proyectos">Explorar mi trabajo <ArrowDownRightIcon className="v3-button-icon" /></a>
+            <a className="v3-secondary" href="https://docauth.app/" target="_blank" rel="noopener noreferrer">Ver DocAuth <ArrowUpRightIcon className="v3-button-icon" /></a>
           </div>
           <div className="v3-runtime"><span>Actualmente</span><code>React · Spring · PostgreSQL · Vercel / VPS</code></div>
         </div>
@@ -117,7 +128,7 @@ export default function PortfolioV3() {
         <BentoGrid>
           <BentoCard className="v3-bento-docauth" accent="blue">
             <ShineBorder />
-            <div className="v3-card-head"><span>FLAGSHIP / LIVE</span><a href="https://docauth.app/" target="_blank" rel="noopener noreferrer">DOC AUTH ↗</a></div>
+            <div className="v3-card-head"><span>FLAGSHIP / LIVE</span><a href="https://docauth.app/" target="_blank" rel="noopener noreferrer">DOC AUTH <ArrowUpRightIcon className="v3-inline-icon" /></a></div>
             <div className="v3-docauth-copy">
               <span className="v3-card-index">01</span>
               <h3>DocAuth</h3>
@@ -173,38 +184,38 @@ export default function PortfolioV3() {
       </section>
 
       <section className="v3-about">
-        <p>“No solo construyo pantallas. Conecto producto, lógica, datos e infraestructura para entregar sistemas completos.”</p>
+        <p>“No solo construyo pantallas. Conecto producto, lógica, datos e infraestructura para entregar <em>sistemas completos.</em>”</p>
         <div><span>PRODUCT THINKING</span><span>FULL STACK DELIVERY</span><span>PRODUCTION MINDSET</span></div>
       </section>
 
       <section className="v3-contact" id="contacto">
         <Meteors number={10} />
         <span className="v3-contact-label">03 / HABLEMOS</span>
-        <h2>¿Construimos<br /><AuroraText>algo increíble?</AuroraText></h2>
+        <h2>¿Construimos<br /><AuroraText className="v3-serif">algo increíble?</AuroraText></h2>
         <p>Busco colaborar en productos donde una buena interfaz y una ingeniería sólida importen de verdad.</p>
-        <a href="mailto:" className="v3-contact-button">Iniciar conversación <span>↗</span></a>
+        <a href="mailto:" className="v3-contact-button">Iniciar conversación <ArrowUpRightIcon className="v3-button-icon" /></a>
         <div className="v3-socials" aria-label="Redes sociales">
           <button type="button" className="v3-social-icon" aria-label="Correo — enlace pendiente" title="Correo · enlace pendiente" disabled>
-            <span className="v3-mail-icon" aria-hidden="true">✉</span>
+            <MailIcon className="v3-social-svg" />
           </button>
           <button type="button" className="v3-social-icon linkedin" aria-label="LinkedIn — enlace pendiente" title="LinkedIn · enlace pendiente" disabled>
-            <img src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="" width="25" height="25" />
+            <LinkedInIcon className="v3-social-svg" />
           </button>
           <button type="button" className="v3-social-icon github" aria-label="GitHub — enlace pendiente" title="GitHub · enlace pendiente" disabled>
-            <img src="https://cdn.simpleicons.org/github/FFFFFF" alt="" width="25" height="25" />
+            <GitHubIcon className="v3-social-svg" />
           </button>
         </div>
       </section>
 
-      <footer className="v3-footer"><span>LUIS ARTURO © 2026</span><span>DESIGNED & BUILT WITH REACT</span><a href="#inicio">VOLVER ARRIBA ↑</a></footer>
+      <footer className="v3-footer"><span>LUIS ARTURO © 2026</span><span>DESIGNED & BUILT WITH REACT</span><a href="#inicio">VOLVER ARRIBA <ArrowUpIcon className="v3-inline-icon" /></a></footer>
 
       <Dock>
-        <DockIcon href="#inicio" label="Inicio"><span>⌂</span></DockIcon>
-        <DockIcon href="#proyectos" label="Proyectos"><span>◫</span></DockIcon>
-        <DockIcon href="#stack" label="Tecnologías"><span>⌘</span></DockIcon>
+        <DockIcon href="#inicio" label="Inicio"><HomeIcon className="v3-dock-svg" /></DockIcon>
+        <DockIcon href="#proyectos" label="Proyectos"><GridIcon className="v3-dock-svg" /></DockIcon>
+        <DockIcon href="#stack" label="Tecnologías"><TerminalIcon className="v3-dock-svg" /></DockIcon>
         <span className="v3-dock-divider" />
-        <DockIcon href="https://docauth.app/" label="Abrir DocAuth"><span>↗</span></DockIcon>
-        <DockIcon href="#contacto" label="Contacto"><span>✉</span></DockIcon>
+        <DockIcon href="https://docauth.app/" label="Abrir DocAuth"><ArrowUpRightIcon className="v3-dock-svg" /></DockIcon>
+        <DockIcon href="#contacto" label="Contacto"><MailIcon className="v3-dock-svg" /></DockIcon>
       </Dock>
     </main>
   );
