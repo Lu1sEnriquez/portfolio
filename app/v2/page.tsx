@@ -83,14 +83,14 @@ export default function PortfolioV2() {
 
           <article className="v2-project v2-caich">
             <figure>
-              <img src="/projects/caich/caich-dashboard.png" alt="Vista conceptual del sistema CAICH para agenda de citas y reservación de cubículos" width="1664" height="936" loading="lazy" />
-              <figcaption>Vista conceptual del sistema</figcaption>
+              <img src="/projects/caich/caich-3.png" alt="Calendario real de CAICH para reservar cubículos" width="2542" height="1255" loading="lazy" />
+              <figcaption>Calendario real del sistema</figcaption>
             </figure>
             <div className="v2-project-copy">
               <p className="v2-project-number">03 / SISTEMA INSTITUCIONAL</p>
               <h3>CAICH</h3>
-              <p>Sistema de ITSON para organizar citas y disponibilidad de cubículos desde una agenda centralizada.</p>
-              <ul><li>Agenda</li><li>Citas</li><li>Cubículos</li></ul>
+              <p>Sistema de ITSON para organizar citas, disponibilidad y reservación de cubículos desde una agenda centralizada.</p>
+              <ul><li>Agenda</li><li>Cubículos</li><li>Acceso por rol</li></ul>
             </div>
           </article>
         </div>

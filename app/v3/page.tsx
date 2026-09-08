@@ -146,8 +146,15 @@ export default function PortfolioV3() {
 
           <BentoCard className="v3-bento-caich" accent="violet">
             <div className="v3-card-head"><span>ITSON / PRIVATE</span><span>03</span></div>
-            <figure><img src="/projects/caich/caich-dashboard.png" alt="Sistema CAICH para agenda de citas y cubículos" width="1200" height="675" loading="lazy" /></figure>
-            <div className="v3-project-copy"><h3>CAICH</h3><p>Agenda central para organizar atención, disponibilidad y reservación de cubículos.</p><div><span>Agenda</span><span>Citas</span><span>Gestión</span></div></div>
+            <figure className="v3-caich-showcase">
+              <img className="v3-caich-main" src="/projects/caich/caich-3.png" alt="Calendario real de CAICH con disponibilidad y reservas de cubículos" width="2542" height="1255" loading="lazy" />
+              <div className="v3-caich-thumbs" aria-label="Otras pantallas de CAICH">
+                <img src="/projects/caich/caich-1.png" alt="Página principal de CAICH" width="2521" height="1267" loading="lazy" />
+                <img src="/projects/caich/caich-2.png" alt="Pantalla de inicio de sesión de CAICH" width="2550" height="1261" loading="lazy" />
+              </div>
+              <figcaption>03 pantallas reales</figcaption>
+            </figure>
+            <div className="v3-project-copy"><h3>CAICH</h3><p>Gestión clínica universitaria con agenda, reservación de cubículos, monedero y acceso según perfil.</p><div><span>Agenda</span><span>Cubículos</span><span>Acceso por rol</span></div></div>
           </BentoCard>
 
           <BentoCard className="v3-bento-feed" accent="amber">
