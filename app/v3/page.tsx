@@ -191,10 +191,10 @@ export default function PortfolioV3() {
             <div className="v3-carousel" aria-label="Capturas de Eni Networks">
               <input type="radio" name="eni-slides" id="eni-slide-1" defaultChecked /><input type="radio" name="eni-slides" id="eni-slide-2" /><input type="radio" name="eni-slides" id="eni-slide-3" /><input type="radio" name="eni-slides" id="eni-slide-4" />
               <div className="v3-carousel-viewport"><div className="v3-carousel-rail">
-                <figure><img src="/projects/eninetworks/zones-dashboard.png" alt="Panel de control de zonas de Eni Networks" width="1200" height="675" /></figure>
-                <figure><img src="/projects/eninetworks/tracking-1.png" alt="Seguimiento de instalación de Eni Networks" width="1200" height="675" /></figure>
-                <figure><img src="/projects/eninetworks/tracking-2.png" alt="Estado de operación de Eni Networks" width="1200" height="675" /></figure>
-                <figure><img src="/projects/eninetworks/tracking-3.png" alt="Actualización técnica de Eni Networks" width="1200" height="675" /></figure>
+                <figure><img className="v3-carousel-image" src="/projects/eninetworks/zones-dashboard.png" alt="Panel de control de zonas de Eni Networks" width="1200" height="675" /></figure>
+                <figure><img className="v3-carousel-image" src="/projects/eninetworks/tracking-1.png" alt="Seguimiento de instalación de Eni Networks" width="1200" height="675" /></figure>
+                <figure><img className="v3-carousel-image" src="/projects/eninetworks/tracking-2.png" alt="Estado de operación de Eni Networks" width="1200" height="675" /></figure>
+                <figure><img className="v3-carousel-image" src="/projects/eninetworks/tracking-3.png" alt="Actualización técnica de Eni Networks" width="1200" height="675" /></figure>
               </div></div>
               <div className="v3-carousel-nav" aria-label="Elegir captura"><label htmlFor="eni-slide-1"><img src="/projects/eninetworks/zones-dashboard.png" alt="" /><span>Zonas</span></label><label htmlFor="eni-slide-2"><img src="/projects/eninetworks/tracking-1.png" alt="" /><span>Instalación</span></label><label htmlFor="eni-slide-3"><img src="/projects/eninetworks/tracking-2.png" alt="" /><span>Ruta</span></label><label htmlFor="eni-slide-4"><img src="/projects/eninetworks/tracking-3.png" alt="" /><span>Visita</span></label></div>
             </div>
@@ -211,9 +211,9 @@ export default function PortfolioV3() {
             <div className="v3-carousel" aria-label="Capturas de CAICH">
               <input type="radio" name="caich-slides" id="caich-slide-1" defaultChecked /><input type="radio" name="caich-slides" id="caich-slide-2" /><input type="radio" name="caich-slides" id="caich-slide-3" />
               <div className="v3-carousel-viewport"><div className="v3-carousel-rail">
-                <figure><img src="/projects/caich/caich-3.png" alt="Calendario de reservas de cubículos de CAICH" width="2542" height="1255" /></figure>
-                <figure><img src="/projects/caich/caich-1.png" alt="Portal principal de CAICH" width="2521" height="1267" /></figure>
-                <figure><img src="/projects/caich/caich-2.png" alt="Acceso de usuarios de CAICH" width="2550" height="1261" /></figure>
+                <figure><img className="v3-carousel-image" src="/projects/caich/caich-3.png" alt="Calendario de reservas de cubículos de CAICH" width="2542" height="1255" /></figure>
+                <figure><img className="v3-carousel-image" src="/projects/caich/caich-1.png" alt="Portal principal de CAICH" width="2521" height="1267" /></figure>
+                <figure><img className="v3-carousel-image" src="/projects/caich/caich-2.png" alt="Acceso de usuarios de CAICH" width="2550" height="1261" /></figure>
               </div></div>
               <div className="v3-carousel-nav three" aria-label="Elegir captura"><label htmlFor="caich-slide-1"><img src="/projects/caich/caich-3.png" alt="" /><span>Agenda</span></label><label htmlFor="caich-slide-2"><img src="/projects/caich/caich-1.png" alt="" /><span>Portal</span></label><label htmlFor="caich-slide-3"><img src="/projects/caich/caich-2.png" alt="" /><span>Acceso</span></label></div>
             </div>
