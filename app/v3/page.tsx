@@ -133,7 +133,7 @@ export default function PortfolioV3() {
               <span className="v3-card-index">01</span>
               <h3>DocAuth</h3>
               <p>Diseñé y desarrollé una plataforma para emitir, aprobar y verificar documentos digitales con QR, evidencia criptográfica y validación on-chain.</p>
-              <ul><li>Producto propio</li><li>QR verificable</li><li>Seguridad digital</li></ul>
+              <ul><li>Next.js · Magic UI</li><li>PostgreSQL · Redis</li><li>Vercel · VPS</li></ul>
             </div>
             <figure className="v3-docauth-visual"><img src="/projects/docauth/docauth-certificado.png" alt="Certificado verificable generado por DocAuth" width="1200" height="840" /></figure>
             <a className="v3-project-open" href="#docauth-detail" aria-label="Ver caso de estudio de DocAuth"><span>VER CASO <ArrowUpRightIcon className="v3-inline-icon" /></span></a>
@@ -142,7 +142,7 @@ export default function PortfolioV3() {
           <BentoCard className="v3-bento-eni" accent="cyan">
             <div className="v3-card-head"><span>FIELD OPS / PRIVATE</span><span>02</span></div>
             <figure><img src="/projects/eninetworks/zones-dashboard.png" alt="Panel geográfico de seguimiento y zonas de Eni Networks" width="1200" height="675" loading="lazy" /></figure>
-            <div className="v3-project-copy"><h3>Eni Networks</h3><p>Desarrollé un panel operativo para controlar instalaciones, técnicos en ruta y zonas KML / KMZ sobre mapa.</p><div><span>KML / KMZ</span><span>Mapas</span><span>Tracking</span></div></div>
+            <div className="v3-project-copy"><h3>Eni Networks</h3><p>Desarrollé un panel para instalaciones, técnicos en ruta, ubicación en tiempo real y zonas KML / KMZ sobre mapa.</p><div><span>Angular Material</span><span>Spring · Sockets</span><span>Leaflet</span></div></div>
             <a className="v3-project-open" href="#eni-detail" aria-label="Ver caso de estudio de Eni Networks"><span>VER CASO <ArrowUpRightIcon className="v3-inline-icon" /></span></a>
           </BentoCard>
 
@@ -177,7 +177,7 @@ export default function PortfolioV3() {
         <a className="v3-modal-backdrop" href="#proyectos" aria-label="Cerrar caso de estudio" />
         <article className="v3-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="docauth-title">
           <a className="v3-modal-close" href="#proyectos">CERRAR <span>×</span></a>
-          <div className="v3-modal-copy"><span>01 / FLAGSHIP · LIVE</span><h2 id="docauth-title">DocAuth</h2><p>Una plataforma de confianza digital que convierte documentos en credenciales verificables. Diseñé el flujo completo de emisión, aprobación y consulta mediante QR, evidencia criptográfica y validación on-chain.</p><div className="v3-modal-tags"><span>Next.js</span><span>Spring</span><span>PostgreSQL</span><span>Blockchain</span></div><a className="v3-modal-live" href="https://docauth.app/" target="_blank" rel="noopener noreferrer">Ver producto en vivo <ArrowUpRightIcon className="v3-inline-icon" /></a></div>
+          <div className="v3-modal-copy"><span>01 / FLAGSHIP · LIVE</span><h2 id="docauth-title">DocAuth</h2><p>Una plataforma de confianza digital que convierte documentos en credenciales verificables. Diseñé el flujo completo de emisión, aprobación y consulta mediante QR, evidencia criptográfica y validación on-chain; también integré analítica, observabilidad e IA para hacer el producto más útil y confiable.</p><div className="v3-modal-tags"><span>Next.js</span><span>PostgreSQL</span><span>Redis</span><span>Magic UI</span><span>shadcn/ui</span><span>Konva.js</span><span>CSS</span><span>Sentry</span><span>PostHog</span><span>Vercel</span><span>VPS / Linux</span><span>IA</span></div><a className="v3-modal-live" href="https://docauth.app/" target="_blank" rel="noopener noreferrer">Ver producto en vivo <ArrowUpRightIcon className="v3-inline-icon" /></a></div>
           <div className="v3-modal-visual docauth"><figure><img src="/projects/docauth/docauth-certificado.png" alt="Credencial verificable emitida desde DocAuth" width="1200" height="840" /></figure><p>Emisión y verificación de credenciales digitales</p></div>
         </article>
       </section>
@@ -186,7 +186,7 @@ export default function PortfolioV3() {
         <a className="v3-modal-backdrop" href="#proyectos" aria-label="Cerrar caso de estudio" />
         <article className="v3-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="eni-title">
           <a className="v3-modal-close" href="#proyectos">CERRAR <span>×</span></a>
-          <div className="v3-modal-copy"><span>02 / FIELD OPS · PRIVATE</span><h2 id="eni-title">Eni Networks</h2><p>Un panel operativo para dar visibilidad a instalaciones y técnicos en campo. Integré la administración de zonas geográficas, mapas y archivos KML / KMZ para que la operación se pueda seguir y coordinar desde un solo lugar.</p><div className="v3-modal-tags"><span>React</span><span>Mapas</span><span>KML / KMZ</span><span>Tracking</span></div><p className="v3-modal-note">Proyecto privado — las capturas muestran la interfaz sin exponer datos sensibles.</p></div>
+          <div className="v3-modal-copy"><span>02 / FIELD OPS · PRIVATE</span><h2 id="eni-title">Eni Networks</h2><p>Un panel operativo construido para dar visibilidad a instalaciones y técnicos en campo. Implementé seguimiento con sockets y ubicación en tiempo real, junto con zonas, mapas y archivos KML / KMZ para coordinar toda la operación desde un solo lugar.</p><div className="v3-modal-tags"><span>Angular</span><span>Angular Material</span><span>Java</span><span>Spring</span><span>WebSockets</span><span>Leaflet</span><span>KML / KMZ</span><span>Ubicación en tiempo real</span><span>PostgreSQL</span><span>VPS / Linux</span></div><p className="v3-modal-note">Proyecto privado — las capturas muestran la interfaz sin exponer datos sensibles.</p></div>
           <div className="v3-modal-visual"><figure><img src="/projects/eninetworks/zones-dashboard.png" alt="Panel de control de zonas de Eni Networks" width="1200" height="675" /></figure><div className="v3-modal-thumbs"><img src="/projects/eninetworks/tracking-1.png" alt="Seguimiento de instalación de Eni Networks" width="1200" height="675" /><img src="/projects/eninetworks/tracking-2.png" alt="Estado de operación de Eni Networks" width="1200" height="675" /><img src="/projects/eninetworks/tracking-3.png" alt="Actualización técnica de Eni Networks" width="1200" height="675" /></div></div>
         </article>
       </section>
