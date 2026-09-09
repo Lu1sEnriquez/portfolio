@@ -86,7 +86,7 @@ export default function PortfolioV3() {
       <nav className="v3-topbar" aria-label="Navegación principal">
         <a className="v3-logo" href="#inicio"><span>LE</span><i /></a>
         <div className="v3-top-links">
-          <a href="#proyectos">Proyectos</a><a href="#stack">Stack</a><a href="#contacto">Contacto</a>
+          <a href="#proyectos">Proyectos</a><a href="#galeria">Galería</a><a href="#stack">Stack</a><a href="#contacto">Contacto</a>
         </div>
         <div className="v3-site-status"><span /> PORTFOLIO / 2026</div>
       </nav>
@@ -132,8 +132,8 @@ export default function PortfolioV3() {
             <div className="v3-docauth-copy">
               <span className="v3-card-index">01</span>
               <h3>DocAuth</h3>
-              <p>Plataforma para emitir, aprobar y verificar documentos digitales mediante QR, evidencia criptográfica y validación on-chain.</p>
-              <ul><li>Producto propio</li><li>Seguridad digital</li><li>Blockchain</li></ul>
+              <p>Diseñé y desarrollé una plataforma para emitir, aprobar y verificar documentos digitales con QR, evidencia criptográfica y validación on-chain.</p>
+              <ul><li>Producto propio</li><li>QR verificable</li><li>Seguridad digital</li></ul>
             </div>
             <figure className="v3-docauth-visual"><img src="/projects/docauth/docauth-certificado.png" alt="Certificado verificable generado por DocAuth" width="1200" height="840" /></figure>
           </BentoCard>
@@ -141,7 +141,7 @@ export default function PortfolioV3() {
           <BentoCard className="v3-bento-eni" accent="cyan">
             <div className="v3-card-head"><span>FIELD OPS / PRIVATE</span><span>02</span></div>
             <figure><img src="/projects/eninetworks/zones-dashboard.png" alt="Panel geográfico de seguimiento y zonas de Eni Networks" width="1200" height="675" loading="lazy" /></figure>
-            <div className="v3-project-copy"><h3>Eni Networks</h3><p>Tracking de instalaciones, técnicos en ruta y administración de zonas geográficas.</p><div><span>KML / KMZ</span><span>Mapas</span><span>Tracking</span></div></div>
+            <div className="v3-project-copy"><h3>Eni Networks</h3><p>Desarrollé un panel operativo para controlar instalaciones, técnicos en ruta y zonas KML / KMZ sobre mapa.</p><div><span>KML / KMZ</span><span>Mapas</span><span>Tracking</span></div></div>
           </BentoCard>
 
           <BentoCard className="v3-bento-caich" accent="violet">
@@ -154,7 +154,7 @@ export default function PortfolioV3() {
               </div>
               <figcaption>03 pantallas reales</figcaption>
             </figure>
-            <div className="v3-project-copy"><h3>CAICH</h3><p>Gestión clínica universitaria con agenda, reservación de cubículos, monedero y acceso según perfil.</p><div><span>Agenda</span><span>Cubículos</span><span>Acceso por rol</span></div></div>
+            <div className="v3-project-copy"><h3>CAICH</h3><p>Implementé un sistema clínico universitario con agenda, reserva de cubículos, monedero y acceso diferenciado por perfil.</p><div><span>Agenda</span><span>Cubículos</span><span>Acceso por rol</span></div></div>
           </BentoCard>
 
           <BentoCard className="v3-bento-feed" accent="amber">
@@ -170,9 +170,71 @@ export default function PortfolioV3() {
         </BentoGrid>
       </section>
 
+      <section className="v3-gallery" id="galeria">
+        <header className="v3-heading">
+          <div><span>02 / CASOS EN DETALLE</span><i /></div>
+          <h2>Más que pantallas.<br /><span>Sistemas en acción.</span></h2>
+          <p>Una mirada directa al producto, las decisiones técnicas y la operación que resuelve cada proyecto.</p>
+        </header>
+
+        <div className="v3-case-stories">
+          <article className="v3-case-story blue">
+            <span>01 / DOC AUTH</span><h3>Identidad digital que se puede comprobar.</h3>
+            <p>Una experiencia completa para emitir, aprobar y verificar documentos sin depender de procesos manuales ni validaciones ambiguas.</p>
+            <ul><li>Next.js</li><li>Spring</li><li>PostgreSQL</li><li>QR / on-chain</li></ul>
+          </article>
+          <article className="v3-case-story cyan">
+            <span>02 / ENI NETWORKS</span><h3>Operación de campo con contexto geográfico.</h3>
+            <p>Un centro de control para seguir instalaciones y técnicos, visualizar zonas y convertir archivos KML / KMZ en decisiones operativas.</p>
+            <ul><li>React</li><li>Mapas</li><li>KML / KMZ</li><li>Tracking</li></ul>
+          </article>
+          <article className="v3-case-story violet">
+            <span>03 / CAICH · ITSON</span><h3>Agenda y espacios sin fricción institucional.</h3>
+            <p>Un flujo pensado para usuarios y administración: disponibilidad, citas, cubículos, saldo y permisos en un solo sistema.</p>
+            <ul><li>Angular</li><li>Java</li><li>SQL</li><li>Roles</li></ul>
+          </article>
+        </div>
+
+        <div className="v3-gallery-label"><span>EXPLORAR CAPTURAS REALES</span><i /></div>
+        <div className="v3-gallery-grid">
+          <a className="v3-gallery-item v3-gallery-docauth" href="/projects/docauth/docauth-certificado.png" target="_blank" rel="noreferrer" aria-label="Abrir captura de certificado verificable de DocAuth">
+            <img src="/projects/docauth/docauth-certificado.png" alt="Credencial digital verificable de DocAuth" width="1200" height="840" />
+            <span><small>DOC AUTH</small><strong>Credencial verificable <ArrowUpRightIcon className="v3-inline-icon" /></strong></span>
+          </a>
+          <a className="v3-gallery-item v3-gallery-eni-main" href="/projects/eninetworks/zones-dashboard.png" target="_blank" rel="noreferrer" aria-label="Abrir panel de zonas de Eni Networks">
+            <img src="/projects/eninetworks/zones-dashboard.png" alt="Mapa de zonas y operaciones de Eni Networks" width="1200" height="675" loading="lazy" />
+            <span><small>ENI NETWORKS</small><strong>Control de zonas <ArrowUpRightIcon className="v3-inline-icon" /></strong></span>
+          </a>
+          <a className="v3-gallery-item v3-gallery-eni-1" href="/projects/eninetworks/tracking-1.png" target="_blank" rel="noreferrer" aria-label="Abrir seguimiento de Eni Networks">
+            <img src="/projects/eninetworks/tracking-1.png" alt="Seguimiento de instalaciones en Eni Networks" width="1200" height="675" loading="lazy" />
+            <span><small>ENI / TRACKING</small><strong>Instalaciones <ArrowUpRightIcon className="v3-inline-icon" /></strong></span>
+          </a>
+          <a className="v3-gallery-item v3-gallery-eni-2" href="/projects/eninetworks/tracking-2.png" target="_blank" rel="noreferrer" aria-label="Abrir panel operativo de Eni Networks">
+            <img src="/projects/eninetworks/tracking-2.png" alt="Panel de operación de Eni Networks" width="1200" height="675" loading="lazy" />
+            <span><small>ENI / TRACKING</small><strong>Operación <ArrowUpRightIcon className="v3-inline-icon" /></strong></span>
+          </a>
+          <a className="v3-gallery-item v3-gallery-eni-3" href="/projects/eninetworks/tracking-3.png" target="_blank" rel="noreferrer" aria-label="Abrir mapa técnico de Eni Networks">
+            <img src="/projects/eninetworks/tracking-3.png" alt="Mapa técnico de Eni Networks" width="1200" height="675" loading="lazy" />
+            <span><small>ENI / TRACKING</small><strong>Mapa técnico <ArrowUpRightIcon className="v3-inline-icon" /></strong></span>
+          </a>
+          <a className="v3-gallery-item v3-gallery-caich-main" href="/projects/caich/caich-3.png" target="_blank" rel="noreferrer" aria-label="Abrir calendario de CAICH">
+            <img src="/projects/caich/caich-3.png" alt="Calendario y reservas de cubículos de CAICH" width="2542" height="1255" loading="lazy" />
+            <span><small>CAICH · ITSON</small><strong>Agenda de cubículos <ArrowUpRightIcon className="v3-inline-icon" /></strong></span>
+          </a>
+          <a className="v3-gallery-item v3-gallery-caich-1" href="/projects/caich/caich-1.png" target="_blank" rel="noreferrer" aria-label="Abrir pantalla principal de CAICH">
+            <img src="/projects/caich/caich-1.png" alt="Pantalla principal de CAICH" width="2521" height="1267" loading="lazy" />
+            <span><small>CAICH</small><strong>Portal <ArrowUpRightIcon className="v3-inline-icon" /></strong></span>
+          </a>
+          <a className="v3-gallery-item v3-gallery-caich-2" href="/projects/caich/caich-2.png" target="_blank" rel="noreferrer" aria-label="Abrir acceso de CAICH">
+            <img src="/projects/caich/caich-2.png" alt="Inicio de sesión de CAICH" width="2550" height="1261" loading="lazy" />
+            <span><small>CAICH</small><strong>Acceso <ArrowUpRightIcon className="v3-inline-icon" /></strong></span>
+          </a>
+        </div>
+      </section>
+
       <section className="v3-stack" id="stack">
         <header className="v3-heading">
-          <div><span>02 / CAPACIDADES</span><i /></div>
+          <div><span>03 / CAPACIDADES</span><i /></div>
           <h2>Un stack amplio.<br /><span>Una sola visión.</span></h2>
           <p>Elijo la herramienta por el problema: interfaces, APIs, datos, mensajería y despliegue.</p>
         </header>
@@ -197,7 +259,7 @@ export default function PortfolioV3() {
 
       <section className="v3-contact" id="contacto">
         <Meteors number={10} />
-        <span className="v3-contact-label">03 / HABLEMOS</span>
+        <span className="v3-contact-label">04 / HABLEMOS</span>
         <h2>¿Construimos<br /><AuroraText className="v3-serif">algo increíble?</AuroraText></h2>
         <p>Busco colaborar en productos donde una buena interfaz y una ingeniería sólida importen de verdad.</p>
         <a href="mailto:" className="v3-contact-button">Iniciar conversación <ArrowUpRightIcon className="v3-button-icon" /></a>
