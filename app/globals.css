@@ -674,9 +674,8 @@ footer { padding-bottom: 100px; min-height: 200px; }
 .v3-top-links { display: flex; gap: 30px; color: #a8a8b2; font-size: 13px; }
 .v3-top-links a { transition: color .2s; }
 .v3-top-links a:hover { color: white; }
-.v3-version { justify-self: end; padding: 4px; display: flex; gap: 2px; border: 1px solid var(--v3-line); border-radius: 999px; background: rgba(8,8,11,.7); backdrop-filter: blur(16px); }
-.v3-version a { width: 35px; height: 27px; display: grid; place-items: center; border-radius: 999px; color: #777781; font: 11px var(--font-geist-mono), monospace; }
-.v3-version a.active { background: white; color: black; }
+.v3-site-status { justify-self: end; display: flex; align-items: center; gap: 8px; color: #83838d; font: 10px var(--font-geist-mono), monospace; letter-spacing: .1em; }
+.v3-site-status span { width: 7px; height: 7px; border-radius: 50%; background: var(--v3-cyan); box-shadow: 0 0 12px var(--v3-cyan); }
 .v3-hero { min-height: 790px; padding: 112px 0 100px; display: grid; grid-template-columns: minmax(0,1.5fr) minmax(300px,.65fr); align-items: center; gap: 90px; }
 .v3-hero-copy { position: relative; z-index: 3; }
 .v3-kicker, .v3-availability, .v3-runtime, .v3-card-head, .v3-heading > div, .v3-contact-label { font-family: var(--font-geist-mono), monospace; }

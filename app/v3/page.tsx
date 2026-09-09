@@ -88,7 +88,7 @@ export default function PortfolioV3() {
         <div className="v3-top-links">
           <a href="#proyectos">Proyectos</a><a href="#stack">Stack</a><a href="#contacto">Contacto</a>
         </div>
-        <div className="v3-version"><a href="/">V1</a><a href="/v2">V2</a><a className="active" href="/v3">V3</a></div>
+        <div className="v3-site-status"><span /> PORTFOLIO / 2026</div>
       </nav>
 
       <section className="v3-hero">
