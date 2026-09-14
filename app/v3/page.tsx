@@ -6,10 +6,14 @@ import { Dock, DockIcon } from "../../components/magicui/dock";
 import { Meteors } from "../../components/magicui/meteors";
 import { Particles } from "../../components/magicui/particles";
 import { ShineBorder } from "../../components/magicui/shine-border";
+import { CopyEmailButton } from "../../components/copy-email-button";
 import {
   ArrowDownRightIcon,
   ArrowUpIcon,
   ArrowUpRightIcon,
+  CheckIcon,
+  CopyIcon,
+  FileTextIcon,
   GitHubIcon,
   GridIcon,
   HomeIcon,
@@ -28,33 +32,36 @@ const stack = [
     title: "Frontend",
     tone: "cyan",
     items: [
-      ["React", "react", "61DAFB"], ["Angular", "angular", "DD0031"], ["Next.js", "nextdotjs", "FFFFFF"],
-      ["Astro", "astro", "BC52EE"], ["TypeScript", "typescript", "3178C6"], ["HTML5", "html5", "E34F26"], ["CSS", "css", "663399"],
+      ["React", "react", "61DAFB"], ["Next.js", "nextdotjs", "FFFFFF"], ["Angular", "angular", "DD0031"],
+      ["Astro", "astro", "BC52EE"], ["Zustand", "react", "474747"], ["Tailwind", "tailwindcss", "06B6D4"],
+      ["TypeScript", "typescript", "3178C6"], ["JavaScript", "javascript", "F7DF1E"],
     ],
   },
   {
-    title: "Backend",
+    title: "Backend & APIs",
     tone: "violet",
     items: [
-      ["Java", "openjdk", "FFFFFF"], ["Spring", "spring", "6DB33F"], ["Python", "python", "3776AB"],
-      ["Jupyter", "jupyter", "F37626"], ["ASP.NET", "dotnet", "512BD4"], ["NestJS", "nestjs", "E0234E"],
-      ["Express", "express", "FFFFFF"], ["Node.js", "nodedotjs", "5FA04E"],
+      ["Java", "openjdk", "FFFFFF"], ["Spring", "spring", "6DB33F"], ["C#", "/icons/csharp.svg", "239120"],
+      ["ASP.NET", "dotnet", "512BD4"], ["Python", "python", "3776AB"], ["Node.js", "nodedotjs", "5FA04E"],
+      ["NestJS", "nestjs", "E0234E"], ["Express", "express", "FFFFFF"],
     ],
   },
   {
-    title: "Datos & eventos",
+    title: "Datos & Eventos",
     tone: "blue",
     items: [
-      ["SQL", "databricks", "FF3621"], ["PostgreSQL", "postgresql", "4169E1"], ["MySQL", "mysql", "4479A1"],
-      ["Mosquitto / MQTT", "eclipsemosquitto", "3C5280"], ["RabbitMQ", "rabbitmq", "FF6600"],
+      ["PostgreSQL", "postgresql", "4169E1"], ["SQL Server", "/icons/sqlserver.svg", "CC292B"], ["MySQL", "mysql", "4479A1"],
+      ["MongoDB", "mongodb", "47A248"], ["Redis", "redis", "FF4438"], ["InfluxDB", "influxdb", "22ADF6"],
+      ["RabbitMQ", "rabbitmq", "FF6600"], ["Mosquitto", "eclipsemosquitto", "3C5280"],
     ],
   },
   {
-    title: "Deploy & herramientas",
+    title: "Cloud & DevOps",
     tone: "amber",
     items: [
-      ["VPS / Linux", "linux", "FCC624"], ["Vercel", "vercel", "FFFFFF"], ["Postman", "postman", "FF6C37"],
-      ["Insomnia", "insomnia", "4000BF"], ["Sentry", "sentry", "362D59"], ["Git", "git", "F05032"],
+      ["Linux / VPS", "linux", "FCC624"], ["AWS", "/icons/aws.svg", "FFFFFF"], ["Docker", "docker", "2496ED"],
+      ["S3 / R2", "cloudflare", "F38020"], ["Vercel", "vercel", "FFFFFF"], ["Sentry", "sentry", "362D59"],
+      ["Git", "git", "F05032"],
     ],
   },
 ] as const;
@@ -62,20 +69,24 @@ const stack = [
 function TechCloud({ items }: { items: readonly (readonly [string, string, string])[] }) {
   return (
     <div className="v3-tech-cloud">
-      {items.map(([name, slug, color]) => (
-        <span className="v3-tech" key={name}>
-          <img src={`https://cdn.simpleicons.org/${slug}/${color}`} alt="" width="24" height="24" loading="lazy" />
-          {name}
-        </span>
-      ))}
+      {items.map(([name, slug, color]) => {
+        const isLocal = slug.endsWith(".svg");
+        const src = isLocal ? slug : `https://cdn.simpleicons.org/${slug}/${color}`;
+        return (
+          <span className="v3-tech" key={name}>
+            <img src={src} alt="" width="24" height="24" loading="lazy" />
+            {name}
+          </span>
+        );
+      })}
     </div>
   );
 }
 
 const updates = [
-  ["DocAuth", "Credenciales verificables y evidencia on-chain", "LIVE"],
-  ["Eni Networks", "Tracking técnico y zonas KML / KMZ", "PRIVATE"],
-  ["CAICH · ITSON", "Agenda de citas y cubículos", "PRIVATE"],
+  ["DocAuth", "Verificación on-chain sub-segundo y credenciales criptográficas QR", "LIVE"],
+  ["Eni Networks", "Monitoreo en tiempo real y optimización de despacho técnico (-35%)", "PRIVATE"],
+  ["CAICH · ITSON", "Autoservicio clínico institucional, agenda y control de acceso RBAC", "PRIVATE"],
 ] as const;
 
 export default function PortfolioV3() {
@@ -86,7 +97,7 @@ export default function PortfolioV3() {
       <nav className="v3-topbar" aria-label="Navegación principal">
         <a className="v3-logo" href="#inicio"><span>LE</span><i /></a>
         <div className="v3-top-links">
-          <a href="#proyectos">Proyectos</a><a href="#stack">Stack</a><a href="#contacto">Contacto</a>
+          <a href="#proyectos">Proyectos</a><a href="#stack">Stack</a><a href="#contacto">Contacto</a><a href="/cv/CV-Luis-Arturo-Enriquez.pdf" target="_blank" rel="noopener noreferrer">CV</a>
         </div>
         <div className="v3-site-status"><span /> PORTFOLIO / 2026</div>
       </nav>
@@ -97,10 +108,11 @@ export default function PortfolioV3() {
           <div className="v3-availability"><span /> Disponible para nuevos retos</div>
           <p className="v3-kicker">FULL STACK ENGINEER · MÉXICO / REMOTO</p>
           <h1>Construyo productos<br /><AuroraText className="v3-serif">de punta a punta.</AuroraText></h1>
-          <p className="v3-intro">Frontend preciso, backend sólido e infraestructura lista para producción. Convierto operaciones complejas en experiencias claras y confiables.</p>
+          <p className="v3-intro">Software Engineer especializado en arquitecturas web distribuidas, telemetría y plataformas operativas en tiempo real. Combino frontend de alta fidelidad, backends escalables (Spring Boot, NestJS) e infraestructura en producción para resolver problemas complejos de negocio.</p>
           <div className="v3-hero-actions">
             <a className="v3-primary" href="#proyectos">Explorar mi trabajo <ArrowDownRightIcon className="v3-button-icon" /></a>
-            <a className="v3-secondary" href="https://docauth.app/" target="_blank" rel="noopener noreferrer">Ver DocAuth <ArrowUpRightIcon className="v3-button-icon" /></a>
+            <a className="v3-secondary" href="/cv/CV-Luis-Arturo-Enriquez.pdf" target="_blank" rel="noopener noreferrer">Ver CV <FileTextIcon className="v3-button-icon" /></a>
+            <a className="v3-secondary" href="https://docauth.app/" target="_blank" rel="noopener noreferrer">DocAuth <ArrowUpRightIcon className="v3-button-icon" /></a>
           </div>
           <div className="v3-runtime"><span>Actualmente</span><code>React · Spring · PostgreSQL · Vercel / VPS</code></div>
         </div>
@@ -110,8 +122,8 @@ export default function PortfolioV3() {
           <div className="v3-profile-top"><span>PROFILE_01</span><span className="v3-live">● ONLINE</span></div>
           <div className="v3-photo"><img src="/perfil.png" alt="Retrato de Luis Arturo" width="480" height="560" /></div>
           <div className="v3-profile-data">
-            <p>Luis Arturo</p><span>Product-minded engineer</span>
-            <dl><div><dt>FOCUS</dt><dd>Web systems</dd></div><div><dt>MODE</dt><dd>Full stack</dd></div></dl>
+            <p>Luis Arturo</p><span>Full Stack Engineer</span>
+            <dl><div><dt>FOCUS</dt><dd>Real-time systems</dd></div><div><dt>STACK</dt><dd>Spring · React · Nest</dd></div></dl>
           </div>
         </aside>
 
@@ -177,7 +189,20 @@ export default function PortfolioV3() {
         <a className="v3-modal-backdrop" href="#proyectos" aria-label="Cerrar caso de estudio" />
         <article className="v3-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="docauth-title">
           <a className="v3-modal-close" href="#proyectos">CERRAR <span>×</span></a>
-          <div className="v3-modal-copy"><span>01 / FLAGSHIP · LIVE</span><h2 id="docauth-title">DocAuth</h2><p>Una plataforma de confianza digital que convierte documentos en credenciales verificables. Diseñé el flujo completo de emisión, aprobación y consulta mediante QR, evidencia criptográfica y validación on-chain; también integré analítica, observabilidad e IA para hacer el producto más útil y confiable.</p><div className="v3-modal-tags"><span>Next.js</span><span>PostgreSQL</span><span>Redis</span><span>Magic UI</span><span>shadcn/ui</span><span>Konva.js</span><span>CSS</span><span>Sentry</span><span>PostHog</span><span>Vercel</span><span>VPS / Linux</span><span>IA</span></div><a className="v3-modal-live" href="https://docauth.app/" target="_blank" rel="noopener noreferrer">Ver producto en vivo <ArrowUpRightIcon className="v3-inline-icon" /></a></div>
+          <div className="v3-modal-copy">
+            <span>01 / FLAGSHIP · LIVE</span>
+            <h2 id="docauth-title">DocAuth</h2>
+            <p>Una plataforma de confianza digital que convierte documentos en credenciales verificables. Diseñé el flujo completo de emisión, aprobación y consulta mediante QR, evidencia criptográfica y validación on-chain; también integré analítica, observabilidad e IA para hacer el producto más útil y confiable.</p>
+            <div className="v3-modal-metrics">
+              <div><strong>&lt; 1s</strong><span>Validación QR & on-chain</span></div>
+              <div><strong>100%</strong><span>Trazabilidad auditable</span></div>
+              <div><strong>99.9%</strong><span>Uptime con Sentry + PostHog</span></div>
+            </div>
+            <div className="v3-modal-tags">
+              <span>Next.js</span><span>PostgreSQL</span><span>Redis</span><span>Magic UI</span><span>shadcn/ui</span><span>Konva.js</span><span>CSS</span><span>Sentry</span><span>PostHog</span><span>Vercel</span><span>VPS / Linux</span><span>IA</span>
+            </div>
+            <a className="v3-modal-live" href="https://docauth.app/" target="_blank" rel="noopener noreferrer">Ver producto en vivo <ArrowUpRightIcon className="v3-inline-icon" /></a>
+          </div>
           <div className="v3-modal-visual docauth"><figure><img src="/projects/docauth/docauth-certificado.png" alt="Credencial verificable emitida desde DocAuth" width="1200" height="840" /></figure><p>Emisión y verificación de credenciales digitales</p></div>
         </article>
       </section>
@@ -186,7 +211,20 @@ export default function PortfolioV3() {
         <a className="v3-modal-backdrop" href="#proyectos" aria-label="Cerrar caso de estudio" />
         <article className="v3-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="eni-title">
           <a className="v3-modal-close" href="#proyectos">CERRAR <span>×</span></a>
-          <div className="v3-modal-copy"><span>02 / FIELD OPS · PRIVATE</span><h2 id="eni-title">Eni Networks</h2><p>Un panel operativo construido para dar visibilidad a instalaciones y técnicos en campo. Implementé seguimiento con sockets y ubicación en tiempo real, junto con zonas, mapas y archivos KML / KMZ para coordinar toda la operación desde un solo lugar.</p><div className="v3-modal-tags"><span>Angular</span><span>Angular Material</span><span>Java</span><span>Spring</span><span>WebSockets</span><span>Leaflet</span><span>KML / KMZ</span><span>Ubicación en tiempo real</span><span>PostgreSQL</span><span>VPS / Linux</span></div><p className="v3-modal-note">Proyecto privado — las capturas muestran la interfaz sin exponer datos sensibles.</p></div>
+          <div className="v3-modal-copy">
+            <span>02 / FIELD OPS · PRIVATE</span>
+            <h2 id="eni-title">Eni Networks</h2>
+            <p>Panel operativo para visibilidad y coordinación de cuadrillas e instalaciones técnicas en campo. Implementé seguimiento por sockets y geolocalización en tiempo real sobre capas KML / KMZ, integrando notificaciones automáticas al cliente final vía WhatsApp Business API.</p>
+            <div className="v3-modal-metrics">
+              <div><strong>-35%</strong><span>Tiempo de despacho en campo</span></div>
+              <div><strong>Real-time</strong><span>Tracking sockets & Leaflet/KML</span></div>
+              <div><strong>Auto</strong><span>Alertas vía WhatsApp API</span></div>
+            </div>
+            <div className="v3-modal-tags">
+              <span>Angular</span><span>Angular Material</span><span>Java</span><span>Spring</span><span>WebSockets</span><span>Leaflet</span><span>KML / KMZ</span><span>Ubicación en tiempo real</span><span>PostgreSQL</span><span>VPS / Linux</span>
+            </div>
+            <p className="v3-modal-note">Proyecto privado — las capturas muestran la interfaz sin exponer datos sensibles.</p>
+          </div>
           <div className="v3-modal-visual">
             <div className="v3-carousel" aria-label="Capturas de Eni Networks">
               <input type="radio" name="eni-slides" id="eni-slide-1" defaultChecked /><input type="radio" name="eni-slides" id="eni-slide-2" /><input type="radio" name="eni-slides" id="eni-slide-3" /><input type="radio" name="eni-slides" id="eni-slide-4" />
@@ -206,7 +244,20 @@ export default function PortfolioV3() {
         <a className="v3-modal-backdrop" href="#proyectos" aria-label="Cerrar caso de estudio" />
         <article className="v3-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="caich-title">
           <a className="v3-modal-close" href="#proyectos">CERRAR <span>×</span></a>
-          <div className="v3-modal-copy"><span>03 / ITSON · PRIVATE</span><h2 id="caich-title">CAICH</h2><p>Un sistema clínico universitario que reúne agenda, reserva de cubículos, monedero y permisos por perfil. Construí una experiencia de autoservicio clara para estudiantes y una operación más ordenada para administración.</p><div className="v3-modal-tags"><span>Angular</span><span>Java</span><span>SQL</span><span>Acceso por rol</span></div><p className="v3-modal-note">Proyecto privado realizado para el entorno universitario.</p></div>
+          <div className="v3-modal-copy">
+            <span>03 / ITSON · PRIVATE</span>
+            <h2 id="caich-title">CAICH</h2>
+            <p>Sistema clínico universitario integral que reúne agenda médica, reserva de cubículos, monedero digital y control de acceso por roles. Construí una experiencia de autoservicio para estudiantes y una operación ordenada para administración, eliminando solapamientos de turnos en espacios clínicos de alta demanda.</p>
+            <div className="v3-modal-metrics">
+              <div><strong>100%</strong><span>Autoservicio en reservas</span></div>
+              <div><strong>0</strong><span>Solapamientos en agenda</span></div>
+              <div><strong>RBAC</strong><span>Roles, permisos y monedero</span></div>
+            </div>
+            <div className="v3-modal-tags">
+              <span>Angular</span><span>Java</span><span>SQL</span><span>Acceso por rol</span>
+            </div>
+            <p className="v3-modal-note">Proyecto privado realizado para el entorno universitario.</p>
+          </div>
           <div className="v3-modal-visual">
             <div className="v3-carousel" aria-label="Capturas de CAICH">
               <input type="radio" name="caich-slides" id="caich-slide-1" defaultChecked /><input type="radio" name="caich-slides" id="caich-slide-2" /><input type="radio" name="caich-slides" id="caich-slide-3" />
@@ -242,8 +293,8 @@ export default function PortfolioV3() {
       </section>
 
       <section className="v3-about">
-        <p>“No solo construyo pantallas. Conecto producto, lógica, datos e infraestructura para entregar <em>sistemas completos.</em>”</p>
-        <div><span>PRODUCT THINKING</span><span>FULL STACK DELIVERY</span><span>PRODUCTION MINDSET</span></div>
+        <p>“No solo construyo pantallas. Conecto arquitectura distribuida, telemetría en tiempo real y producto para entregar <em>sistemas robustos en producción.</em>”</p>
+        <div><span>PRODUCT THINKING</span><span>REAL-TIME SYSTEMS</span><span>PRODUCTION MINDSET</span></div>
       </section>
 
       <section className="v3-contact" id="contacto">
@@ -251,17 +302,50 @@ export default function PortfolioV3() {
         <span className="v3-contact-label">03 / HABLEMOS</span>
         <h2>¿Construimos<br /><AuroraText className="v3-serif">algo increíble?</AuroraText></h2>
         <p>Busco colaborar en productos donde una buena interfaz y una ingeniería sólida importen de verdad.</p>
-        <a href="mailto:" className="v3-contact-button">Iniciar conversación <ArrowUpRightIcon className="v3-button-icon" /></a>
+        <div className="v3-contact-actions">
+          <a href="mailto:luis.lavz.2300@gmail.com" className="v3-contact-button">
+            Iniciar conversación <ArrowUpRightIcon className="v3-button-icon" />
+          </a>
+          <CopyEmailButton email="luis.lavz.2300@gmail.com" />
+          <a
+            href="/cv/CV-Luis-Arturo-Enriquez.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="CV-Luis-Arturo-Enriquez.pdf"
+            className="v3-contact-cv-button"
+          >
+            <FileTextIcon className="v3-button-icon" /> Descargar CV
+          </a>
+        </div>
         <div className="v3-socials" aria-label="Redes sociales">
-          <button type="button" className="v3-social-icon" aria-label="Correo — enlace pendiente" title="Correo · enlace pendiente" disabled>
+          <a
+            href="mailto:luis.lavz.2300@gmail.com"
+            className="v3-social-icon"
+            aria-label="Enviar correo a Luis Arturo"
+            title="Correo · luis.lavz.2300@gmail.com"
+          >
             <MailIcon className="v3-social-svg" />
-          </button>
-          <button type="button" className="v3-social-icon linkedin" aria-label="LinkedIn — enlace pendiente" title="LinkedIn · enlace pendiente" disabled>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/luis-arturo-enriquez-v-966b502b6/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="v3-social-icon linkedin"
+            aria-label="Perfil de LinkedIn de Luis Arturo"
+            title="LinkedIn"
+          >
             <LinkedInIcon className="v3-social-svg" />
-          </button>
-          <button type="button" className="v3-social-icon github" aria-label="GitHub — enlace pendiente" title="GitHub · enlace pendiente" disabled>
+          </a>
+          <a
+            href="https://github.com/Lu1sEnriquez"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="v3-social-icon github"
+            aria-label="Perfil de GitHub de Luis Arturo"
+            title="GitHub"
+          >
             <GitHubIcon className="v3-social-svg" />
-          </button>
+          </a>
         </div>
       </section>
 
@@ -272,8 +356,10 @@ export default function PortfolioV3() {
         <DockIcon href="#proyectos" label="Proyectos"><GridIcon className="v3-dock-svg" /></DockIcon>
         <DockIcon href="#stack" label="Tecnologías"><TerminalIcon className="v3-dock-svg" /></DockIcon>
         <span className="v3-dock-divider" />
-        <DockIcon href="https://docauth.app/" label="Abrir DocAuth"><ArrowUpRightIcon className="v3-dock-svg" /></DockIcon>
-        <DockIcon href="#contacto" label="Contacto"><MailIcon className="v3-dock-svg" /></DockIcon>
+        <DockIcon href="/cv/CV-Luis-Arturo-Enriquez.pdf" label="Ver CV (PDF)"><FileTextIcon className="v3-dock-svg" /></DockIcon>
+        <DockIcon href="https://github.com/Lu1sEnriquez" label="GitHub"><GitHubIcon className="v3-dock-svg" /></DockIcon>
+        <DockIcon href="https://www.linkedin.com/in/luis-arturo-enriquez-v-966b502b6/" label="LinkedIn"><LinkedInIcon className="v3-dock-svg" /></DockIcon>
+        <DockIcon href="mailto:luis.lavz.2300@gmail.com" label="Contacto"><MailIcon className="v3-dock-svg" /></DockIcon>
       </Dock>
     </main>
   );

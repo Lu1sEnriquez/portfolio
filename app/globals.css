@@ -4112,6 +4112,35 @@ footer {
     10px var(--font-geist-mono),
     monospace;
 }
+.v3-modal-metrics {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--v3-line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.025);
+}
+.v3-modal-metrics > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.v3-modal-metrics strong {
+  color: #e6f7ff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.v3-modal-metrics span {
+  color: #8e8e99;
+  font:
+    10px var(--font-geist-mono),
+    monospace;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
 .v3-modal-live {
   width: max-content;
   margin-top: 32px;
@@ -4514,18 +4543,27 @@ footer {
   font-size: 17px;
   line-height: 1.65;
 }
+.v3-contact-actions {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
 .v3-contact-button {
   min-height: 58px;
-  margin-top: 36px;
+  margin-top: 0;
   padding: 0 25px;
   display: inline-flex;
   align-items: center;
-  gap: 45px;
+  gap: 14px;
   border-radius: 11px;
   background: white;
   color: black;
   font-size: 14px;
   font-weight: 700;
+  text-decoration: none;
   transition:
     transform 0.2s,
     box-shadow 0.2s;
@@ -4533,6 +4571,42 @@ footer {
 .v3-contact-button:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 50px rgba(255, 255, 255, 0.13);
+}
+.v3-copy-button,
+.v3-contact-cv-button {
+  min-height: 58px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--v3-line);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #dedee5;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  backdrop-filter: blur(14px);
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+}
+.v3-copy-button:hover,
+.v3-contact-cv-button:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 229, 255, 0.45);
+  background: rgba(0, 229, 255, 0.08);
+  color: white;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+.v3-copy-button.copied {
+  border-color: rgba(74, 222, 128, 0.6);
+  background: rgba(74, 222, 128, 0.12);
+  color: #4ade80;
 }
 .v3-socials {
   margin-top: 62px;
@@ -4555,7 +4629,8 @@ footer {
   border-radius: 13px;
   background: rgba(255, 255, 255, 0.045);
   color: white;
-  cursor: default;
+  cursor: pointer;
+  text-decoration: none;
   opacity: 1;
   transition:
     transform 0.2s,
@@ -4857,6 +4932,12 @@ footer {
   }
   .v3-modal-copy > p {
     font-size: 14px;
+  }
+  .v3-modal-metrics {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 18px;
+    padding: 12px;
   }
   .v3-modal-visual {
     min-height: 330px;

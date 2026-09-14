@@ -5,5 +5,17 @@ export function Dock({ children }: { children: ReactNode }) {
 }
 
 export function DockIcon({ href, label, children }: { href: string; label: string; children: ReactNode }) {
-  return <a className="magic-dock-icon" href={href} aria-label={label} title={label}>{children}</a>;
+  const isExternal = href.startsWith("http");
+  return (
+    <a
+      className="magic-dock-icon"
+      href={href}
+      aria-label={label}
+      title={label}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
+    >
+      {children}
+    </a>
+  );
 }
