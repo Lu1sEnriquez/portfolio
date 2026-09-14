@@ -191,10 +191,10 @@ export default function PortfolioV3() {
             <div className="v3-carousel" aria-label="Capturas de Eni Networks">
               <input type="radio" name="eni-slides" id="eni-slide-1" defaultChecked /><input type="radio" name="eni-slides" id="eni-slide-2" /><input type="radio" name="eni-slides" id="eni-slide-3" /><input type="radio" name="eni-slides" id="eni-slide-4" />
               <div className="v3-carousel-viewport"><div className="v3-carousel-rail">
-                <figure><img className="v3-carousel-image" src="/projects/eninetworks/zones-dashboard.png" alt="Panel de control de zonas de Eni Networks" width="1200" height="675" /></figure>
-                <figure><img className="v3-carousel-image" src="/projects/eninetworks/tracking-1.png" alt="Seguimiento de instalación de Eni Networks" width="1200" height="675" /></figure>
-                <figure><img className="v3-carousel-image" src="/projects/eninetworks/tracking-2.png" alt="Estado de operación de Eni Networks" width="1200" height="675" /></figure>
-                <figure><img className="v3-carousel-image" src="/projects/eninetworks/tracking-3.png" alt="Actualización técnica de Eni Networks" width="1200" height="675" /></figure>
+                <figure><img className="v3-carousel-image" src="/projects/eninetworks/zones-dashboard.png" alt="Panel de control de zonas de Eni Networks" width="1672" height="941" /></figure>
+                <figure><img className="v3-carousel-image" src="/projects/eninetworks/tracking-1.png" alt="Seguimiento de instalación de Eni Networks" width="377" height="769" /></figure>
+                <figure><img className="v3-carousel-image" src="/projects/eninetworks/tracking-2.png" alt="Estado de operación de Eni Networks" width="377" height="769" /></figure>
+                <figure><img className="v3-carousel-image" src="/projects/eninetworks/tracking-3.png" alt="Actualización técnica de Eni Networks" width="377" height="769" /></figure>
               </div></div>
               <div className="v3-carousel-nav" aria-label="Elegir captura"><label htmlFor="eni-slide-1"><img src="/projects/eninetworks/zones-dashboard.png" alt="" /><span>Zonas</span></label><label htmlFor="eni-slide-2"><img src="/projects/eninetworks/tracking-1.png" alt="" /><span>Instalación</span></label><label htmlFor="eni-slide-3"><img src="/projects/eninetworks/tracking-2.png" alt="" /><span>Ruta</span></label><label htmlFor="eni-slide-4"><img src="/projects/eninetworks/tracking-3.png" alt="" /><span>Visita</span></label></div>
             </div>
