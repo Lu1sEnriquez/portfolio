@@ -327,7 +327,7 @@ export default function Home() {
             <MailIcon className="v3-social-svg" />
           </a>
           <a
-            href="https://www.linkedin.com/in/luis-arturo-enriquez-v-966b502b6/"
+            href="https://www.linkedin.com/in/lu1senriquez/"
             target="_blank"
             rel="noopener noreferrer"
             className="v3-social-icon linkedin"
@@ -358,7 +358,7 @@ export default function Home() {
         <span className="v3-dock-divider" />
         <DockIcon href="/cv/CV-Luis-Arturo-Enriquez.pdf" label="Ver CV (PDF)"><FileTextIcon className="v3-dock-svg" /></DockIcon>
         <DockIcon href="https://github.com/Lu1sEnriquez" label="GitHub"><GitHubIcon className="v3-dock-svg" /></DockIcon>
-        <DockIcon href="https://www.linkedin.com/in/luis-arturo-enriquez-v-966b502b6/" label="LinkedIn"><LinkedInIcon className="v3-dock-svg" /></DockIcon>
+        <DockIcon href="https://www.linkedin.com/in/lu1senriquez/" label="LinkedIn"><LinkedInIcon className="v3-dock-svg" /></DockIcon>
         <DockIcon href="mailto:luis.lavz.2300@gmail.com" label="Contacto"><MailIcon className="v3-dock-svg" /></DockIcon>
       </Dock>
     </main>
